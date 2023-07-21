@@ -195,22 +195,26 @@ def user_stats(df):
 
 
 def data_display(df):
-    """Display raw data as users wish. And everytime only 10 rows are displayed."""
+    """Displays raw data that has been filtered by city, month and weekday as users wish. And each time 10 rows are displayed."""
 
+    # get input of whether the user want to see some raw data
     show_data = input(
         'Now would you like to see the raw data, 10 rows each time? y - yes, n- no\n')
     start = 0
     end = len(df.index) - 1
     while show_data == 'y' and start < end:
+        # print out the last few rows
         if start+10 >= end:
             print('Displaying the last few rows of data...')
             print(df.iloc[start:end+1, :])
             break
+        # print out data 10 rows everytime when it's not the end.
         else:
             print('Displaying data from row {} to row {}...'.format(start, start+9))
             print(df.iloc[start:start+10, :])
 
         start += 10
+        # get input of whether the user wannt to continue seeing the data.
         show_data = input(
             'Would you like to continue to see the next 10 rows? y-yes, n-no\n')
 
