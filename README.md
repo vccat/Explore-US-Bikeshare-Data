@@ -14,18 +14,23 @@ This is a learner's project and the goal is to examine the knowledage I have lea
 - new_york_city.csv
 - washington.csv
 
-### Code Running Environment
+### Install
+#### Code Running Environment
 - Pythton
-    ```
-    $ python --version
-    Python 3.10.4
-    ```
+```
+$ python --version
+Python 3.10.4
+```
 - Anaconda
-    ```
-    $ conda --version
-    conda 23.3.1
-    ```
-
+```
+$ conda --version
+conda 23.3.1
+```
+#### Run the code with command line
+```
+$HOME$/anaconda3/python bikeshare.py 
+```  
+    
 ### Credits
 - [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
 - [Stackoverflow](https://stackoverflow.com/questions/)
