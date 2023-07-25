@@ -218,8 +218,8 @@ def data_display(df):
 def main():
     while True:
         city, month, day = get_filters()
-        print('OK! You have choosen ', city, ' in month',
-              month, 'and on the weekday', day)
+        print('OK! You have choosen {} in month {} and on the weekday {}'.format(
+            city, month, day))
         df = load_data(city, month, day)
 
         time_stats(df)
