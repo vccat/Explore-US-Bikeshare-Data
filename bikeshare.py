@@ -178,6 +178,7 @@ def user_stats(df):
 
     # Display counts of gender
     if 'Gender' in df.columns:
+        print('\n')
         print('The breakdown of user gender:')
         print(df.groupby('Gender').size())
 
