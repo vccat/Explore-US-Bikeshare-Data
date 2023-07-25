@@ -67,9 +67,9 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    CITY_DATA = {'chicago': 'chicago.csv',
-                 'new york city': 'new_york_city.csv',
-                 'washington': 'washington.csv'}
+    # CITY_DATA = {'chicago': 'chicago.csv',
+    #             'new york city': 'new_york_city.csv',
+    #             'washington': 'washington.csv'}
 
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
@@ -178,6 +178,7 @@ def user_stats(df):
 
     # Display counts of gender
     if 'Gender' in df.columns:
+        print('\n')
         print('The breakdown of user gender:')
         print(df.groupby('Gender').size())
 
@@ -222,8 +223,8 @@ def data_display(df):
 def main():
     while True:
         city, month, day = get_filters()
-        print('OK! You have choosen ', city, ' in month',
-              month, 'and on the weekday', day)
+        print('OK! You have choosen {} in month {} and on the weekday {}'.format(
+            city, month, day))
         df = load_data(city, month, day)
 
         time_stats(df)
